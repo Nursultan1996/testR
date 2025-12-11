@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thirdpartylibs>
+    <library>
+        <name>guzzlehttp/guzzle</name>
+        <description>Guzzle HTTP client</description>
+        <license>MIT</license>
+        <version>7.x</version>
+        <source>https://github.com/guzzle/guzzle</source>
+    </library>
+
+    <library>
+        <name>guzzlehttp/promises</name>
+        <description>Guzzle promises library</description>
+        <license>MIT</license>
+        <version>1.x</version>
+        <source>https://github.com/guzzle/promises</source>
+    </library>
+
+    <library>
+        <name>guzzlehttp/psr7</name>
+        <description>PSR-7 HTTP message implementation</description>
+        <license>MIT</license>
+        <version>2.x</version>
+        <source>https://github.com/guzzle/psr7</source>
+    </library>
+
+    <library>
+        <name>psr/http-message</name>
+        <description>PSR HTTP message interfaces</description>
+        <license>MIT</license>
+        <version>1.x</version>
+        <source>https://github.com/php-fig/http-message</source>
+    </library>
+
+    <library>
+        <name>ralouphie/getallheaders</name>
+        <description>Helper to get all HTTP headers</description>
+        <license>MIT</license>
+        <version>3.x</version>
+        <source>https://github.com/ralouphie/getallheaders</source>
+    </library>
+</thirdpartylibs>
