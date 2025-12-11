@@ -2,7 +2,7 @@
 
 namespace quizaccess_oqylyq\oqylyq;
 
-interface ICommand {
+interface icommand {
     public function getRequestUrl() : string;
     public function getRequestMethod() : string;
     public function getRequestData() : array;
