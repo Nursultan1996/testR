@@ -31,7 +31,7 @@ use \quizaccess_oqylyq\event\access_prevented;
 defined('MOODLE_INTERNAL') || die();
 
 global $CFG;
-require_once($CFG->dirroot . '/mod/quiz/accessrule/accessrulebase.php');
+require_once($CFG->dirroot . '/mod/quiz/classes/accessrulebase.php');
 
 /**
  * Implementation of the quizaccess_oqylyq plugin.
