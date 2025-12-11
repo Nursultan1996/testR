@@ -24,7 +24,7 @@
   */
 
 
-namespace quizaccess_oqylyq\oqylyq;
+namespace quizaccess_oqylyq\local;
 
 class assignment implements icommand {
     protected $assignment = [];
