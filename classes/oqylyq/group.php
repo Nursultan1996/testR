@@ -13,7 +13,7 @@
 
 namespace quizaccess_oqylyq\oqylyq;
 
-class Group implements ICommand {
+class group implements icommand {
     protected $group = [];
 
     public function __construct(array $data = []) {
