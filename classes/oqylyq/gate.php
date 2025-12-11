@@ -7,9 +7,9 @@ require_once(__DIR__ . '/../../vendor/autoload.php');
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\Exception as GuzzleException;
 
-class Gate
+class gate
 {
-    public static function make(ICommand $command) {
+    public static function make(icommand $command) {
         /* initialize client */
         $client = new GuzzleClient();
 
