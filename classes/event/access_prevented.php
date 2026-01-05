@@ -26,7 +26,7 @@
 namespace quizaccess_oqylyq\event;
 
 use core\event\base;
-use quizaccess_oqylyq\access_manager;
+use quizaccess_oqylyq\local\access_manager;
 
 defined('MOODLE_INTERNAL') || die();
 

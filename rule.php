@@ -23,10 +23,10 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-use quizaccess_oqylyq\access_manager;
-use quizaccess_oqylyq\quiz_settings;
-use quizaccess_oqylyq\settings_provider;
-use \quizaccess_oqylyq\event\access_prevented;
+use quizaccess_oqylyq\local\access_manager;
+use quizaccess_oqylyq\local\quiz_settings;
+use quizaccess_oqylyq\local\settings_provider;
+use quizaccess_oqylyq\event\access_prevented;
 
 defined('MOODLE_INTERNAL') || die();
 

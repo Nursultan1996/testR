@@ -15,7 +15,7 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Command object representing a session payload for Oqylyq API.
+ * Interface for defining API command objects consumed by Oqylyq gateway.
  *
  * @package    quizaccess_oqylyq
  * @author     Eduard Zaukarnaev <eduard.zaukarnaev@gmail.com>
@@ -26,67 +26,45 @@
 namespace quizaccess_oqylyq\local;
 
 /**
- * Session command class.
+ * Interface for API command objects.
  *
  * @package    quizaccess_oqylyq
  * @copyright  2020 Ertumar LLP
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class session implements command_interface {
-    /** @var array Session data */
-    protected $session = [];
-
-    /**
-     * Constructor.
-     *
-     * @param array $data Session data
-     */
-    public function __construct(array $data = []) {
-        $this->session = $data;
-    }
-
+interface command_interface {
     /**
      * Get the request URL path.
      *
      * @return string
      */
-    public function get_request_url() : string {
-        return '/external-session/assignment.json';
-    }
-
-    /**
-     * Get the request data payload.
-     *
-     * @return array
-     */
-    public function get_request_data() : array {
-        return $this->session;
-    }
-
-    /**
-     * Get the request query parameters.
-     *
-     * @return array
-     */
-    public function get_request_query() : array {
-        return [];
-    }
-
-    /**
-     * Get the request headers.
-     *
-     * @return array
-     */
-    public function get_request_headers() : array {
-        return [];
-    }
+    public function get_request_url() : string;
 
     /**
      * Get the HTTP request method.
      *
      * @return string
      */
-    public function get_request_method() : string {
-        return 'POST';
-    }
+    public function get_request_method() : string;
+
+    /**
+     * Get the request data payload.
+     *
+     * @return array
+     */
+    public function get_request_data() : array;
+
+    /**
+     * Get the request query parameters.
+     *
+     * @return array
+     */
+    public function get_request_query() : array;
+
+    /**
+     * Get the request headers.
+     *
+     * @return array
+     */
+    public function get_request_headers() : array;
 }

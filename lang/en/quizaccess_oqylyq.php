@@ -43,24 +43,46 @@ $string['invalid_hash_key'] = "Invalid Proctoring hash key";
 $string['missingrequiredsettings'] = 'Config settings are missing some required values.';
 $string['name'] = 'Oqylyq Proctoring';
 $string['pluginname'] = 'Proctoring Access Rules';
-$string['privacy:metadata:quizaccess_oql_quizsettings'] = 'Proctoring settings for a quiz. This includes the ID of the last user to create or modify the settings.';
-$string['privacy:metadata:quizaccess_oql_quizsettings:quizid'] = 'ID of the quiz the settings exist for.';
-$string['privacy:metadata:quizaccess_oql_quizsettings:timecreated'] = 'Unix time that the settings were created.';
-$string['privacy:metadata:quizaccess_oql_quizsettings:timemodified'] = 'Unix time that the settings were last modified.';
-$string['privacy:metadata:quizaccess_oql_quizsettings:usermodified'] = 'ID of user who last created or modified the settings.';
+
+// Privacy API strings.
+$string['privacy:metadata:quizaccess_oql_quizsettings'] = 'Information about Oqylyq proctoring settings for a quiz. This includes the ID of the user who created or last modified the settings.';
+$string['privacy:metadata:quizaccess_oql_quizsettings:usermodified'] = 'The ID of the user who last created or modified the proctoring settings.';
+$string['privacy:metadata:quizaccess_oql_quizsettings:timecreated'] = 'The time when the proctoring settings were created.';
+$string['privacy:metadata:quizaccess_oql_quizsettings:timemodified'] = 'The time when the proctoring settings were last modified.';
+
+$string['privacy:metadata:quizaccess_oql_quizurls'] = 'Information about generated Oqylyq proctoring session URLs for users attempting quizzes.';
+$string['privacy:metadata:quizaccess_oql_quizurls:userid'] = 'The ID of the user for whom the proctoring session URL was generated.';
+$string['privacy:metadata:quizaccess_oql_quizurls:usermodified'] = 'The ID of the user who last modified this record.';
+$string['privacy:metadata:quizaccess_oql_quizurls:url'] = 'The generated proctoring session URL for accessing the quiz.';
+$string['privacy:metadata:quizaccess_oql_quizurls:timecreated'] = 'The time when the proctoring URL was generated.';
+$string['privacy:metadata:quizaccess_oql_quizurls:timemodified'] = 'The time when the record was last modified.';
+
+$string['privacy:metadata:oqylyq_external'] = 'The Oqylyq plugin sends user information to the external Oqylyq/TrustExam proctoring service in order to create proctored exam sessions.';
+$string['privacy:metadata:oqylyq_external:userid'] = 'The user ID is sent to Oqylyq to identify the student in the proctoring system.';
+$string['privacy:metadata:oqylyq_external:firstname'] = 'The user\'s first name is sent to Oqylyq to identify the student.';
+$string['privacy:metadata:oqylyq_external:lastname'] = 'The user\'s last name is sent to Oqylyq to identify the student.';
+$string['privacy:metadata:oqylyq_external:email'] = 'The user\'s email address is sent to Oqylyq for user identification and communication.';
+$string['privacy:metadata:oqylyq_external:password'] = 'A generated password hash is sent to Oqylyq to secure the proctoring session.';
+$string['privacy:metadata:oqylyq_external:quizname'] = 'The quiz name is sent to Oqylyq to label the proctoring session.';
+
 $string['quizsettings'] = 'Quiz settings';
 $string['restoredfrom'] = '{$a->name} (restored via cmid {$a->cmid})';
 $string['oqylyq'] = 'Proctoring Plugin';
 
-$string['oqylyq:manage_oqylyq_main_camera_record'] = 'Change Proctoring quiz setting: Frontal camera record';
-$string['oqylyq:manage_oqylyq_screen_share_record'] = 'Change Proctoring quiz setting: Screen record';
-$string['oqylyq:manage_oqylyq_second_camera_record'] = 'Change Proctoring quiz setting: Second camera record';
-$string['oqylyq:manage_oqylyq_photo_head_identity'] = 'Change Proctoring quiz setting: Head identity';
-$string['oqylyq:manage_oqylyq_id_verification'] = 'Change Proctoring quiz setting: ID Verification';
-$string['oqylyq:manage_oqylyq_display_checks'] = 'Change Proctoring quiz setting: Display checks';
-$string['oqylyq:manage_oqylyq_fullscreen_mode'] = 'Change Proctoring quiz setting: Fullscreen mode';
-$string['oqylyq:manage_oqylyq_focus_detector'] = 'Change Proctoring quiz setting: Focus Detector';
-$string['oqylyq:manage_oqylyq_extension_detector'] = 'Change Proctoring quiz setting: Extension Detector';
+// Capabilities.
+$string['oqylyq:manage_oqylyq_proctoring'] = 'Manage Oqylyq proctoring settings';
+$string['oqylyq:manage_oqylyq_application'] = 'Manage Oqylyq application type';
+$string['oqylyq:manage_oqylyq_main_camera_record'] = 'Manage Oqylyq frontal camera recording';
+$string['oqylyq:manage_oqylyq_second_camera_record'] = 'Manage Oqylyq second camera recording';
+$string['oqylyq:manage_oqylyq_screen_share_record'] = 'Manage Oqylyq screen recording';
+$string['oqylyq:manage_oqylyq_photo_head_identity'] = 'Manage Oqylyq face identity verification';
+$string['oqylyq:manage_oqylyq_id_verification'] = 'Manage Oqylyq ID verification';
+$string['oqylyq:manage_oqylyq_display_checks'] = 'Manage Oqylyq display checks';
+$string['oqylyq:manage_oqylyq_hdcp_checks'] = 'Manage Oqylyq HDCP/mirror mode checks';
+$string['oqylyq:manage_oqylyq_content_protect'] = 'Manage Oqylyq content protection';
+$string['oqylyq:manage_oqylyq_fullscreen_mode'] = 'Manage Oqylyq fullscreen mode';
+$string['oqylyq:manage_oqylyq_extension_detector'] = 'Manage Oqylyq browser extension detection';
+$string['oqylyq:manage_oqylyq_focus_detector'] = 'Manage Oqylyq focus/mouse detector';
 
 $string['oqylyq_help'] = 'Setup quiz to use the Proctoring Plugin.';
 $string['oqylyq_proctoring'] = 'Require the use of Proctoring Plugin';

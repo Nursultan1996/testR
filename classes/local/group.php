@@ -14,41 +14,79 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
- /**
-  * Command object representing a group-related request for Oqylyq API.
-  *
-  * @package    quizaccess_oqylyq
-  * @author     Eduard Zaukarnaev
-  * @copyright  2020 Ertumar LLP
-  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
-  */
+/**
+ * Command object representing a group-related request for Oqylyq API.
+ *
+ * @package    quizaccess_oqylyq
+ * @author     Eduard Zaukarnaev <eduard.zaukarnaev@gmail.com>
+ * @copyright  2020 Ertumar LLP
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
 
 namespace quizaccess_oqylyq\local;
 
-class group implements icommand {
+/**
+ * Group command class.
+ *
+ * @package    quizaccess_oqylyq
+ * @copyright  2020 Ertumar LLP
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+class group implements command_interface {
+    /** @var array Group data */
     protected $group = [];
 
+    /**
+     * Constructor.
+     *
+     * @param array $data Group data
+     */
     public function __construct(array $data = []) {
         $this->group = $data;
     }
 
-    public function getRequestUrl () : string {
+    /**
+     * Get the request URL path.
+     *
+     * @return string
+     */
+    public function get_request_url() : string {
         return '/groups';
     }
 
-    public function getRequestData () : array {
+    /**
+     * Get the request data payload.
+     *
+     * @return array
+     */
+    public function get_request_data() : array {
         return $this->group;
     }
 
-    public function getRequestQuery() : array {
+    /**
+     * Get the request query parameters.
+     *
+     * @return array
+     */
+    public function get_request_query() : array {
         return [];
     }
 
-    public function getRequestHeaders() : array {
+    /**
+     * Get the request headers.
+     *
+     * @return array
+     */
+    public function get_request_headers() : array {
         return [];
     }
 
-    public function getRequestMethod () : string {
+    /**
+     * Get the HTTP request method.
+     *
+     * @return string
+     */
+    public function get_request_method() : string {
         return 'POST';
     }
 }

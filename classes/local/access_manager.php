@@ -23,7 +23,7 @@
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace quizaccess_oqylyq;
+namespace quizaccess_oqylyq\local;
 
 use context_module;
 use quiz;
